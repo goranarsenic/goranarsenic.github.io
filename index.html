@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
@@ -54,21 +55,78 @@
   }
   .dropdown-menu {
       left: 50%;
+  }
+  .triangle-right {
+      position:relative;
+      padding:15px;
+      margin:1em 0 3em;
+      color:#2ea5fc;
+      background: white;
+      -webkit-border-radius:10px;
+      -moz-border-radius:10px;
+      border-radius:18px;
+  }
+  .triangle-right.left {
+      margin-left:40px;
+      background: white;
+  }
+  .triangle-right.right {
+      margin-right:40px;
+      background: white;
+  }    
+  .triangle-right:after {
+     content:"";
+     position:absolute;
+     bottom:-20px; /* value = - border-top-width - border-bottom-width */
+     left:50px; /* controls horizontal position */
+     border-width:20px 0 0 20px; /* vary these values to change the angle of the vertex */
+     border-style:solid;
+     border-color: white transparent;
+     display:block;
+     width:0;
+  }
+  .triangle-right.left:after {
+      top:16px;
+      left:-40px; /* value = - border-left-width - border-right-width */
+      bottom:auto;
+      border-width:15px 40px 0 0; /* vary these values to change the angle of the vertex */
+      border-color:transparent white;
+  }
+  .triangle-right.right:after {
+      top:16px;
+      right:-40px; /* value = - border-left-width - border-right-width */
+      bottom:auto;
+      left:auto;
+      border-width:15px 0 0 40px; /* vary these values to change the angle of the vertex */
+      border-color:transparent white;
+  }
   </style>
 </head>
 <body>
     
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
-  <h1 class="margin">Hi! Wellcome to my page!</h1>
-  <img src="images/me.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
-  <h3>This is me</h3><br>
-  <h3>My name is Goran and I'm software developer</h3>
-  <div>
+  <h1 class="margin">Hi! Welcome to my page!</h1>
+  <div class="col-sm-4">
+    <p style="margin-top:50px;" class="triangle-right right">My name is Goran and I'm a software developer</p>
+    <p style="margin-top:20px;" class="triangle-right right">I like creating IT solutions using core Java, Spring, JavaScript, AngularJS and enjoy earning new skills as challenges arise</p>
+  </div>
+  <div class="col-sm-4">
+    <img src="images/me.jpg" class="img-responsive img-circle margin" style="display:inline" alt="photo" width="350" height="350">
+  </div>
+  <div class="col-sm-4">
+      <p style="margin-top:50px;" class="triangle-right left">I have a 4 year bachelor's degree in Information Technology from Slobomir P University, Doboj, BiH</p>
+      <p style="margin-top:-20px;" class="triangle-right left">I have succesfully completed the 18 month intensive professional IT training program "BILD-IT" through which I have created the IT solutions that appear below</p>
+  </div>
+  
+  <div class="row">
+  <div class="col-sm-12"> 
       <a target="_blank" href="https://github.com/goranarsenic"><img class="technologies-logo" src="images/github.png"></a>
       <a target="_blank" href="https://www.facebook.com/goran.arsenic.1"><img class="technologies-logo" src="images/facebook.png"></a>
       <a target="_blank" href="https://twitter.com/goran_arsenic"><img class="technologies-logo" src="images/twitter.png"></a>  
-  </div>
+  </div>  
+</div>
+  
 </div>
 
 <!-- Second Container -->
