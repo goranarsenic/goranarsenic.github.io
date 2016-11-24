@@ -1,18 +1,11 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+}
 #mainDiv {
     margin-top: 100px;
-   
 }
 #numberOfMovesDiv {
-    width: 35%;
-    font-family: 'Orbitron', sans-serif;
     font-size: 30px;
-    padding-left: 40px;
-}
-
-#restartButton {
-    width: 20%;
-    font-family: 'Orbitron', sans-serif;
-    padding-left: 62px;
 }
 .btn, .btn:focus {
     font-size: 20px;
